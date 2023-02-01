@@ -1,0 +1,18 @@
+#root {
+    -fx-padding: 28px 32px;
+    -fx-background-color: #E6E3D3;
+}
+
+#title {
+    -fx-font-size: 48px;
+}
+
+#game-mode-prompt {
+    -fx-font-size: 20px;
+}
+
+.player-mode-btn {
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-background-color: #F2F2F2;
+}
