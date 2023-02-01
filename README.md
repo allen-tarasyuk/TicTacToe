@@ -1,6 +1,6 @@
 # TicTacToe
 
-## So far, the game presents three options for player to choose. When an option is selected, a new scene is generated. However, I have yet to provide any functionality to the 'back' button. 
+## So far, the game presents three options for the player to choose. When an option is selected, a new scene is generated. However, I have yet to provide any functionality to the 'back' button. 
 
 
 ### ![image](https://user-images.githubusercontent.com/58355275/215985104-91c2d070-be9b-410a-b5ec-324880301a3f.png)
