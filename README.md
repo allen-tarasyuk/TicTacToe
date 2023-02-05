@@ -1,5 +1,4 @@
 ##  To-Do-List
-##  -----------
 ### - Implement a Score counter
 ### - Make the game display 'Tie' when there's a tie.
 
