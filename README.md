@@ -1,7 +1,8 @@
 ##  To-Do-List
 ### - Provide the option to pick an avatar
-### - Implement a score counter
+### - Instead of an 'X' or an'O'. When tile is selected, their
 ### - Make the game display 'Tie' when there's a tie.
+
 
 
 ## What we have so far:
