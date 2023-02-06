@@ -1,4 +1,5 @@
 ##  To-Do-List
+### - Provide the option to pick an avatar
 ### - Implement a score counter
 ### - Make the game display 'Tie' when there's a tie.
 
