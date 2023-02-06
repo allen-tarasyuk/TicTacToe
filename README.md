@@ -1,6 +1,5 @@
 ##  To-Do-List
 ### - Provide the option to pick an avatar
-### - Instead of an 'X' or an'O'. When tile is selected, their
 ### - Make the game display 'Tie' when there's a tie.
 
 
