@@ -1,6 +1,6 @@
 ## Update
-### Now shows whether or not there has been a 'tie'
-### Now displays whose turn it is
+### - Now shows whether or not there has been a 'tie'
+### - Now displays whose turn it is
 
 ##  To-Do-List
 ### - Provide the option to pick an avatar
