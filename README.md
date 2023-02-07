@@ -1,7 +1,9 @@
+## Update
+- Now shows whether or not there has been a 'tie'
+- Now displays whose turn it is
+
 ##  To-Do-List
 ### - Provide the option to pick an avatar
-### - Make the game display 'Tie' when there's a tie.
-
 
 
 ## What we have so far:
