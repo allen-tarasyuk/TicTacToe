@@ -4,6 +4,7 @@
 
 ##  To-Do-List
 ### - Provide the option to pick an avatar
+### - Make it prettier using CSS
 
 
 ## What we have so far:
