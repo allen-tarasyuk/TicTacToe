@@ -6,6 +6,25 @@
 ### - Provide the option to pick an avatar
 ### - Make it look better using CSS
 
+## Accomplishments/Goals
+Single Player - display a popup indicating this feature is not yet available. ✅
+Two Players - Loads a two-player game.✅
+Network Game - display a popup indicating this feature is not yet available✅
+Player Details - name of the player, pick an avatar ❌
+If player 1 picks an avatar, make sure player 2 can't pick the same avatar. ❌
+Provide each player with the option to change their name/avatar before starting the game. ❌
+Make it so that once the game starts, players cannot modify their details. ❌
+Make it so that Once both players have entered their details, the game starts. ❌
+Make the game board display the current state of the board (i.e. which avatars are in which squares, which squares are blank). ❌
+Make sure the game board should also clearly identify which player's turn it is ✅
+Player 1 and Player 2 should be able to toggle back and forth and select squares on the board ✅. 
+When they select a square, their avatar should be placed on the board ❌
+Indicate to the the user that: The game is over ✅
+Indicate to the the user that: The game ended in a tie (regardless of what happened) ✅
+Indicate to the user that if they want to play again? If yes, clear the board and start a new game with the same player names/avatars. If no, return to the Welcome Screen.🟨
+
+
+
 ## What we have so far:
 
 ### ![image](https://user-images.githubusercontent.com/58355275/215985104-91c2d070-be9b-410a-b5ec-324880301a3f.png)
