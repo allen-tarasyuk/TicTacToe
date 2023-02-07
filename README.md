@@ -6,7 +6,6 @@
 ### - Provide the option to pick an avatar
 ### - Make it look better using CSS
 
-
 ## What we have so far:
 
 ### ![image](https://user-images.githubusercontent.com/58355275/215985104-91c2d070-be9b-410a-b5ec-324880301a3f.png)
