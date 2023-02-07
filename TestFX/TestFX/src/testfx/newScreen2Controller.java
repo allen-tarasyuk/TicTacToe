@@ -50,6 +50,8 @@ public class newScreen2Controller implements Initializable {
 
     private int playerTurn = 0;
 
+    int counter = 0;
+
     ArrayList<Button> buttons;
 
 
@@ -67,6 +69,7 @@ public class newScreen2Controller implements Initializable {
     void restartGame(ActionEvent event) {
         buttons.forEach(this::resetButton);
         winnerText.setText("Tic-Tac-Toe");
+        counter = 0;
     }
 
     public void resetButton(Button button){
@@ -79,6 +82,13 @@ public class newScreen2Controller implements Initializable {
             setPlayerSymbol(button);
             button.setDisable(true);
             checkIfGameIsOver();
+
+            counter++;
+            if(counter == 9){
+                winnerText.setText("Tie!");
+                return;
+            }
+
         });
     }
 
@@ -86,9 +96,11 @@ public class newScreen2Controller implements Initializable {
         if(playerTurn % 2 == 0){
             button.setText("X");
             playerTurn = 1;
+            winnerText.setText("O's Turn");
         } else{
             button.setText("O");
             playerTurn = 0;
+            winnerText.setText("X's Turn");
         }
     }
 
