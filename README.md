@@ -1,6 +1,6 @@
 ## Update:
 
-### - Now shows player selection pages
+### - Player selection pages are now shown
 ### - Now shows whether or not there has been a 'tie'
 ### - Now displays whose turn it is
 
