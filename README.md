@@ -14,7 +14,7 @@
 
 3. Network Game - display a popup indicating this feature is not yet available✅
 
-4. Player Details - name of the player, pick an avatar ❌
+4. Player Details - name of the player, pick an avatar 🟨
 
 5. If player 1 picks an avatar, make sure player 2 can't pick the same avatar. ❌
 
@@ -22,7 +22,7 @@
 
 7. Make it so that once the game starts, players cannot modify their details. ❌
 
-8. Make it so that Once both players have entered their details, the game starts. ❌
+8. Make it so that Once both players have entered their details, the game starts. 🟨
 
 9. Make the game board display the current state of the board (i.e. which avatars are in which squares, which squares are blank). ❌
 
@@ -46,6 +46,10 @@
 ### ![image](https://user-images.githubusercontent.com/58355275/216742181-15b3e724-1c75-4908-8fb3-c71df7fa2a2b.png)
 
 ### ![image](https://user-images.githubusercontent.com/58355275/216742209-24889660-6ee6-415c-9d28-46009cdb1ab7.png)
+
+### ![image](https://user-images.githubusercontent.com/58355275/217420461-33153797-3c64-4a3b-8fea-f9eb3aadfc9d.png)
+
+### ![image](https://user-images.githubusercontent.com/58355275/217420497-dd2be092-b6c8-4b6b-ad0c-7a2416998024.png)
 
 ### ![image](https://user-images.githubusercontent.com/58355275/216792477-7fc7b24c-2b75-42d5-aedf-940e5d9b5e88.png)
 
