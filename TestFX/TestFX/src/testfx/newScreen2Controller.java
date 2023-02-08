@@ -130,21 +130,15 @@ public class newScreen2Controller implements Initializable {
         }
     }
 
-
-
     @FXML
     void backBtn2(ActionEvent event) throws IOException {
-
 
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("testfx.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
-
     }
-
-
 
 
 

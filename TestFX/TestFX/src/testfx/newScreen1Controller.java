@@ -17,22 +17,11 @@ public class newScreen1Controller {
     @FXML
     void backBtn1(ActionEvent event) throws IOException {
 
-
-        // System.out.println("Testing new Screen1 Controller");
-
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("testfx.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
     }
-
-
-
-
-
-
-
-
 
 }
