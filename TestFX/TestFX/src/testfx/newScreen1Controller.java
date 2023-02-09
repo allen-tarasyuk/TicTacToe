@@ -3,6 +3,7 @@ package testfx;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,22 +18,17 @@ public class newScreen1Controller {
     @FXML
     void backBtn1(ActionEvent event) throws IOException {
 
-
-        // System.out.println("Testing new Screen1 Controller");
-
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("testfx.fxml"));
+        
+        Parent root = FXMLLoader.load(new URL("file:src/testfx/newScreen1.fxml"));
+        
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("newScreen1.css").toExternalForm());
+        
+        stage.setTitle("New Screen");
         stage.setScene(scene);
-
+        stage.show();
     }
-
-
-
-
-
-
-
 
 
 }

@@ -3,6 +3,8 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/Users/allentarasyuk/Desktop/JavaFX/javafx-sdk-19.0.2.1/lib/**/*.jar"
+    ],
+    "cSpell.words": [
+        "testfx"
     ]
 }

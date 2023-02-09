@@ -1,7 +1,6 @@
 package testfx;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,14 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class Controller {
+public class Controller extends Object {
 
     @FXML
     private Label gameTitle;
-
-    
-
-
 
     @FXML
     void TwoBtn(ActionEvent event)throws IOException  {

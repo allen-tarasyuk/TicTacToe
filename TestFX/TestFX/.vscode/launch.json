@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "cwd": "${fileDirname}",
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
-            "mainClass": "${file}",
-            "vmArgs": "--module-path /Users/allentarasyuk/Desktop/JavaFX/javafx-sdk-19.0.2.1/lib --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "testfx.main",
+            "vmArgs": "--module-path /TestFX/TestFX/lib --add-modules javafx.controls,javafx.fxml", 
         }
     ]
 }

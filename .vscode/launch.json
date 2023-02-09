@@ -1,0 +1,53 @@
+
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        {
+            "type": "java",
+            "name": "Launch MainApplication",
+            "request": "launch",
+            "mainClass": "com.example.tictactoe/com.example.tictactoe.MainApplication",
+            "projectName": "TicTacToe",
+            "projectVersion": "1.0.0",
+            "project": "TicTacToe",
+            "description": "This is the main application class for the TicTacToe project.",
+            "license": "MIT",
+            "licenseUrl": "https://opensource.org/licenses/MIT",
+            "dependencies": [
+                {
+                    "groupId": "com.example.tictactoe",
+                    "artifactId": "com.example.tictactoe.MainApplication",
+                    "version": "1.0.0",
+                    "scope": "provided",
+                    "type": "jar",
+                    "classifier": "sources",
+                    "extension": "jar",
+                    "path": "com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.jar",
+                    "url": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.jar",
+                    "md5": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+                    "sha1": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+                    "sha256": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+                    "size": 1000000,
+                    "lastModified": "2021-01-20T16:00:00.000+0000",
+                    "md5Url": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.jar.md5",
+                    "sha1Url": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.jar.sha1",
+                    "sha256Url": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.jar.sha256"
+                },
+            ],
+            "dependenciesUrl": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.pom",
+            "dependenciesMd5": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+            "dependenciesSha1": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+            "dependenciesSha256": "74t3tndxag9o7h0890bnpfzh4olk2h9x",
+            "dependenciesSize": 1000000,
+            "dependenciesLastModified": "2021-01-20T16:00:00.000+0000",
+            "dependenciesMd5Url": "https://repo1.maven.org/maven2/com/example/tictactoe/com/example/tictactoe/MainApplication-1.0.0.pom.md5",
+
+            "properties": [
+                {
+
+
+                    "name": "com.example.tictactoe.MainApplication",
+                    "value": "com.example.tictactoe.MainApplication"
+                    },
+            ]
+        }
