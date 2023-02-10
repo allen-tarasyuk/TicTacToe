@@ -21,7 +21,7 @@ public class newScreen1Controller {
         Parent root = FXMLLoader.load(getClass().getResource("testfx.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
+      
     }
 
 }

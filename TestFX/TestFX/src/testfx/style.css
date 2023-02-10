@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: #222;
+    /* -fx-background-radius: 28; */
+
+    -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD);
+    /* -fx-background-radius: 15 15 25 25; */
+    -fx-font-weight: bold;
+
+    -fx-font-family: "Courier New";
+   
+
+
+
+
+}
+
+.mainPane {
+    -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD);
+    /* -fx-background-radius: 15 15 25 25; */
+}
+
+.highlight {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 15;
+}
+
+
