@@ -10,22 +10,32 @@
 
 }
 
-.mainPane {
-    -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD);
-    /* -fx-background-radius: 15 15 25 25; */
-}
+
 
 .label{
-    -fx-text-fill: rgb(255, 74, 104);
+    /* -fx-text-fill: rgb(255, 74, 104); */
+    -fx-text-fill: #fff;
     -fx-font-weight: bold;
 }
 
 .button{
-    -fx-text-fill: rgb(240, 49, 145);
+    /* -fx-text-fill: rgb(240, 49, 145); */
+    -fx-text-fill: #fff;
+   
 }
 .button:hover{
-    -fx-background-color: rgb(55, 232, 55);
+    /* -fx-background-color: rgb(55, 232, 55); */
+    /* -fx-background-color: linear-gradient(to bottom right, #F9ABA4, #EFECEC); */
+    -fx-background-color:#FF7F50;
+    
+
+
     -fx-text-fill: white;
+
+  
+
+
+    /* -fx-transition: 0.3s; */
 }
 
 #myTextField1{
@@ -41,22 +51,24 @@
 }
 
 #myButton1{
-    -fx-background-color: rgb(95, 42, 159);
+    /* -fx-background-color: rgb(95, 42, 159); */
     -fx-text-fill: white;
 }
 
 #myButton1:hover{
-    -fx-background-color: rgb(55, 232, 55);
+    /* -fx-background-color: rgb(55, 232, 55); */
+    -fx-background-color:#FF7F50;
     -fx-text-fill: white;
 }
 
 #myButton2{
-    -fx-background-color: rgb(95, 42, 159);
+    /* -fx-background-color: rgb(95, 42, 159); */
     -fx-text-fill: white;
 }
 
 #myButton2:hover{
-    -fx-background-color: rgb(55, 232, 55);
+    /* -fx-background-color: rgb(55, 232, 55); */
+    -fx-background-color:#FF7F50;
     -fx-text-fill: white;
 }
 
