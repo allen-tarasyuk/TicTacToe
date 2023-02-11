@@ -3,6 +3,14 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/Users/allentarasyuk/Desktop/JavaFX/javafx-sdk-19.0.2.1/lib/**/*.jar"
+        "/Users/allentarasyuk/Desktop/JavaFX/javafx-sdk-19.0.2.1/lib/**/*.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx-swt.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.base.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.controls.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.fxml.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.graphics.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.media.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.swing.jar",
+        "/Users/jasminele/Downloads/javafx-sdk-19.0.2.1/lib/javafx.web.jar"
     ]
 }

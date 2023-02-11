@@ -19,7 +19,7 @@ public class Main extends Application  {
 
         Scene scene = new Scene(root);
 
-        // scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
 
 
