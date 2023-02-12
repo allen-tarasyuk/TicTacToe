@@ -1,12 +1,17 @@
 package testfx;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -46,6 +51,9 @@ public class newScreen2Controller implements Initializable {
     private Button button9;
 
     @FXML
+    private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9;
+
+    @FXML
     private Text winnerText;
 
     private int playerTurn = 0;
@@ -54,10 +62,21 @@ public class newScreen2Controller implements Initializable {
 
     ArrayList<Button> buttons;
 
+    private ArrayList<ImageView> imgViews;
+
+    private final Player player1;
+    private final Player player2;
+
+    public newScreen2Controller() {
+        TwoPlayers twoPlayers = TwoPlayers.getInstance();
+        player1 = twoPlayers.getPlayer1();
+        player2 = twoPlayers.getPlayer2();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttons = new ArrayList<>(Arrays.asList(button1,button2,button3,button4,button5,button6,button7,button8,button9));
+        imgViews = new ArrayList<>(Arrays.asList(img1, img2, img3, img4, img5, img6, img7, img8, img9));
 
         buttons.forEach(button ->{
             setupButton(button);
@@ -68,8 +87,15 @@ public class newScreen2Controller implements Initializable {
     @FXML
     void restartGame(ActionEvent event) {
         buttons.forEach(this::resetButton);
+        resetImageViews();
         winnerText.setText("Tic-Tac-Toe");
         counter = 0;
+    }
+
+    private void resetImageViews() {
+        for (ImageView imgView : imgViews) {
+            imgView.setImage(null);
+        }
     }
 
     public void resetButton(Button button){
@@ -94,44 +120,65 @@ public class newScreen2Controller implements Initializable {
 
     public void setPlayerSymbol(Button button){
         if(playerTurn % 2 == 0){
-            button.setText("X");
+            ((ImageView) button.getChildrenUnmodifiable().get(0)).setImage(player1.getAvatarImg());
             playerTurn = 1;
-            winnerText.setText("O's Turn");
+            winnerText.setText(player2.getUsername() + "'s Turn");
         } else{
-            button.setText("O");
+//            button.setText("O");
+            ((ImageView) button.getChildrenUnmodifiable().get(0)).setImage(player2.getAvatarImg());
             playerTurn = 0;
-            winnerText.setText("X's Turn");
+            winnerText.setText(player1.getUsername() + "'s Turn");
         }
+    }
+
+    private String getGameSymbolString(Button button) {
+        ObservableList<Node> children = button.getChildrenUnmodifiable();
+
+        Image gameSymbolImg = ((ImageView) children.get(0)).getImage();
+
+        if (gameSymbolImg == null) {
+            return "";
+        }
+
+        String gameSymbolImgUrl = gameSymbolImg.getUrl();
+
+        if (player1.compareImageUrl(gameSymbolImgUrl)) {
+            return player1.getGameSymbolText();
+        } else {
+            return player2.getGameSymbolText();
+        }
+
     }
 
     public void checkIfGameIsOver(){
         for (int a = 0; a < 8; a++) {
             String line = switch (a) {
-                case 0 -> button1.getText() + button2.getText() + button3.getText();
-                case 1 -> button4.getText() + button5.getText() + button6.getText();
-                case 2 -> button7.getText() + button8.getText() + button9.getText();
-                case 3 -> button1.getText() + button5.getText() + button9.getText();
-                case 4 -> button3.getText() + button5.getText() + button7.getText();
-                case 5 -> button1.getText() + button4.getText() + button7.getText();
-                case 6 -> button2.getText() + button5.getText() + button8.getText();
-                case 7 -> button3.getText() + button6.getText() + button9.getText();
+                case 0 -> getGameSymbolString(button1) + getGameSymbolString(button2) + getGameSymbolString(button3);
+                case 1 -> getGameSymbolString(button4) + getGameSymbolString(button5) + getGameSymbolString(button6);
+                case 2 -> getGameSymbolString(button7) + getGameSymbolString(button8) + getGameSymbolString(button9);
+                case 3 -> getGameSymbolString(button1) + getGameSymbolString(button5) + getGameSymbolString(button9);
+                case 4 -> getGameSymbolString(button3) + getGameSymbolString(button5) + getGameSymbolString(button7);
+                case 5 -> getGameSymbolString(button1) + getGameSymbolString(button4) + getGameSymbolString(button7);
+                case 6 -> getGameSymbolString(button2) + getGameSymbolString(button5) + getGameSymbolString(button8);
+                case 7 -> getGameSymbolString(button3) + getGameSymbolString(button6) + getGameSymbolString(button9);
                 default -> null;
             };
 
             //X winner
             if (line.equals("XXX")) {
-                winnerText.setText("X won!");
+                winnerText.setText(player1.getUsername() + " won!");
             }
 
             //O winner
             else if (line.equals("OOO")) {
-                winnerText.setText("O won!");
+                winnerText.setText(player2.getUsername() + " won!");
             }
         }
     }
 
     @FXML
     void backBtn2(ActionEvent event) throws IOException {
+        TwoPlayers.resetPlayers();
 
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("testfx.fxml"));
