@@ -23,19 +23,28 @@ public class selectionController2 {
     @FXML
     private TextField myTextField2;
 
-    String name2;
+    Player player2;
+
+    @FXML
+    public void initialize() {
+        TwoPlayers twoPlayers = TwoPlayers.getInstance();
+        player2 = twoPlayers.getPlayer2();
+
+        if (player2.getUsername() != "") {
+            System.out.println("Setting saved player 2 name");
+            myTextField2.setText(player2.getUsername());
+        }
+    }
 
     @FXML
     void submit2(ActionEvent event) throws IOException {
 
-        name2 = myTextField2.getText();
-        System.out.println(name2);
-
-        if(name2 == ""){
+        if(myTextField2.getText() == ""){
             myLabel2.setText("Please Enter Name"); 
-        }else{ 
+        }else{
+            player2.setUsername(myTextField2.getText());
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("newScreen2.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("confirmPlayerSelections.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
         }
