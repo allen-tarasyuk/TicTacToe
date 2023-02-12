@@ -1,18 +1,20 @@
 package testfx;
 
+import javafx.scene.image.Image;
+
 public class Player {
     private String username;
 
-    private int avatarNum;
+    private Image avatarImg;
 
     public Player() {
         this.username = "";
-        this.avatarNum = -1;
+        this.avatarImg = null;
     }
 
-    public Player(String username, int avatarNum) {
+    public Player(String username, Image avatarImg) {
         this.username = username;
-        this.avatarNum = avatarNum;
+        this.avatarImg = avatarImg;
     }
 
     public String getUsername() {
@@ -23,11 +25,11 @@ public class Player {
         this.username = username;
     }
 
-    public int getAvatarNum() {
-        return avatarNum;
+    public Image getAvatarImg() {
+        return avatarImg;
     }
 
-    public void setAvatarNum(int avatarNum) {
-        this.avatarNum = avatarNum;
+    public void setAvatarImg(Image avatarImg) {
+        this.avatarImg = avatarImg;
     }
 }
