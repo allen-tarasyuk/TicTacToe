@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.ConfirmPlayerSelections">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.ConfirmPlayerSelections">
    <children>
       <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -37,8 +37,8 @@
                </font></Label>
             <ImageView fx:id="player1Avatar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
             <ImageView fx:id="player2Avatar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#restartSetup" prefHeight="38.0" prefWidth="224.0" text="Restart" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button layoutX="10.0" layoutY="342.0" mnemonicParsing="false" onAction="#startGame" prefHeight="39.0" prefWidth="226.0" text="Start Game" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#restartSetup" prefHeight="38.0" prefWidth="224.0" text="Restart" GridPane.halignment="CENTER" GridPane.rowIndex="3" styleClass="highlight" />
+            <Button layoutX="10.0" layoutY="342.0" mnemonicParsing="false" onAction="#startGame" prefHeight="39.0" prefWidth="226.0" text="Start Game" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" styleClass="highlight" />
          </children>
       </GridPane>
    </children>
