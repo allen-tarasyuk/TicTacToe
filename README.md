@@ -1,12 +1,13 @@
 ## Update:
 
+### - Player can select avatar (that is not selected by opponent)
+### - Player can change details before starting game
 ### - Player selection pages are now shown
 ### - Now shows whether or not there has been a 'tie'
 ### - Now displays whose turn it is
 
 ##  To-Do-List:
-### - Provide the option to pick an avatar
-### - Make it look better using CSS
+### - Place avatar on game board instead of Xs and Os
 
 ## Accomplishments/Goals:
 
@@ -16,15 +17,15 @@
 
 3. Network Game - display a popup indicating this feature is not yet available✅
 
-4. Player Details - name of the player, pick an avatar 🟨
+4. Player Details - name of the player, pick an avatar ✅
 
-5. If player 1 picks an avatar, make sure player 2 can't pick the same avatar. ❌
+5. If player 1 picks an avatar, make sure player 2 can't pick the same avatar. ✅
 
-6. Provide each player with the option to change their name/avatar before starting the game. ❌
+6. Provide each player with the option to change their name/avatar before starting the game. ✅
 
-7. Make it so that once the game starts, players cannot modify their details. ❌
+7. Make it so that once the game starts, players cannot modify their details. ✅
 
-8. Make it so that Once both players have entered their details, the game starts. 🟨
+8. Make it so that Once both players have entered their details, the game starts. ✅
 
 9. Make the game board display the current state of the board (i.e. which avatars are in which squares, which squares are blank). ❌
 
