@@ -1,5 +1,7 @@
 ## Update:
 
+### - Game controls (turn / who won) references players' username
+### - Avatars are placed on board when player selects tile
 ### - Player can select avatar (that is not selected by opponent)
 ### - Player can change details before starting game
 ### - Player selection pages are now shown
@@ -7,7 +9,7 @@
 ### - Now displays whose turn it is
 
 ##  To-Do-List:
-### - Place avatar on game board instead of Xs and Os
+### - 
 
 ## Accomplishments/Goals:
 
@@ -27,13 +29,13 @@
 
 8. Make it so that Once both players have entered their details, the game starts. ✅
 
-9. Make the game board display the current state of the board (i.e. which avatars are in which squares, which squares are blank). ❌
+9. Make the game board display the current state of the board (i.e. which avatars are in which squares, which squares are blank). ✅
 
 10. Make sure the game board should also clearly identify which player's turn it is ✅
 
 11. Player 1 and Player 2 should be able to toggle back and forth and select squares on the board ✅. 
 
-12. When they select a square, their avatar should be placed on the board ❌
+12. When they select a square, their avatar should be placed on the board ✅
 
 13. Indicate to the the user that: The game is over ✅
 
