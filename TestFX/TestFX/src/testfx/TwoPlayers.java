@@ -2,23 +2,25 @@ package testfx;
 
 public final class TwoPlayers {
 
-    private Player player1;
-    private Player player2;
+    private final Player player1;
+    private final Player player2;
 
-    private final static TwoPlayers INSTANCE = new TwoPlayers();
+    private static TwoPlayers INSTANCE = new TwoPlayers();
 
     private TwoPlayers() {
         this.player1 = new Player();
         this.player2 = new Player();
+
+        this.player1.setGameSymbolText("X");
+        this.player2.setGameSymbolText("O");
     }
 
     public static TwoPlayers getInstance() {
         return INSTANCE;
     }
 
-    public void resetPlayers() {
-        this.player1 = new Player();
-        this.player2 = new Player();
+    public static void resetPlayers() {
+        TwoPlayers.INSTANCE = new TwoPlayers();
     }
 
     public Player getPlayer1() {

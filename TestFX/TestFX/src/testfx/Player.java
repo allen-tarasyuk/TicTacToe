@@ -2,19 +2,28 @@ package testfx;
 
 import javafx.scene.image.Image;
 
+import java.util.Objects;
+
 public class Player {
     private String username;
 
     private Image avatarImg;
 
+    private String gameSymbolText;
+
     public Player() {
         this.username = "";
         this.avatarImg = null;
+        this.gameSymbolText = "";
     }
 
     public Player(String username, Image avatarImg) {
         this.username = username;
         this.avatarImg = avatarImg;
+    }
+
+    public boolean compareImageUrl(String otherImgUrl) {
+        return Objects.equals(otherImgUrl, this.avatarImg.getUrl());
     }
 
     public String getUsername() {
@@ -31,5 +40,13 @@ public class Player {
 
     public void setAvatarImg(Image avatarImg) {
         this.avatarImg = avatarImg;
+    }
+
+    public String getGameSymbolText() {
+        return gameSymbolText;
+    }
+
+    public void setGameSymbolText(String gameSymbolText) {
+        this.gameSymbolText = gameSymbolText;
     }
 }
