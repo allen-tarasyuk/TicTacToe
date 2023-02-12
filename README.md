@@ -43,27 +43,25 @@
 
 ## What we have so far:
 
-### ![image](https://user-images.githubusercontent.com/58355275/215985104-91c2d070-be9b-410a-b5ec-324880301a3f.png)
+![image](https://user-images.githubusercontent.com/58355275/217975345-0450ee66-c640-4e5d-a93a-47370c8a4bc8.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/216742181-15b3e724-1c75-4908-8fb3-c71df7fa2a2b.png)
+![image](https://user-images.githubusercontent.com/58355275/217975390-724966b5-5cfc-4a1c-8653-812b0e8b0b6f.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/216742209-24889660-6ee6-415c-9d28-46009cdb1ab7.png)
+![image](https://user-images.githubusercontent.com/58355275/217975425-45294787-91aa-4a6e-ab01-54725cb57f92.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/217420721-f8102dac-0eab-444e-ac08-71cbe9687a5f.png)
+![image](https://user-images.githubusercontent.com/58355275/217975462-686eaeef-c7e0-4ce5-9e94-7c8e774d03e4.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/217420497-dd2be092-b6c8-4b6b-ad0c-7a2416998024.png)
+![image](https://user-images.githubusercontent.com/58355275/217975501-49bcc3e5-7203-466f-9022-2e5d3ff09fc2.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/216792477-7fc7b24c-2b75-42d5-aedf-940e5d9b5e88.png)
+![image](https://user-images.githubusercontent.com/58355275/217975531-710e0f0f-f09d-4dc8-908f-675bfe3cafdc.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/216792488-2c8c243f-8582-40fd-b00d-ef73b00dfb91.png)
+![image](https://user-images.githubusercontent.com/58355275/217975551-ecec56fa-25e9-4111-a8c5-d74fb90143c6.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/216792498-53e81c28-f460-404d-becc-20e7b25610d0.png)
+![image](https://user-images.githubusercontent.com/58355275/217975570-d5a5f211-19a0-449c-ba70-73edfb1bfff6.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/217154263-8ef74109-47ec-47e5-85f9-157222365513.png)
+![image](https://user-images.githubusercontent.com/58355275/217975588-5db8b207-5541-49c0-aeee-24ea42c938c2.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/217155605-7d750b32-9b6d-4ce7-a5a3-fdd97211206d.png)
 
-### ![image](https://user-images.githubusercontent.com/58355275/217154812-907f1084-aec5-479b-8696-22e3727c7041.png)
 
 
 

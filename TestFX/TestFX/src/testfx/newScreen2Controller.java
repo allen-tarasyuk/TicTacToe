@@ -85,7 +85,7 @@ public class newScreen2Controller implements Initializable {
 
             counter++;
             if(counter == 9){
-                winnerText.setText("Tie!");
+                winnerText.setText("Draw!");
                 return;
             }
 
