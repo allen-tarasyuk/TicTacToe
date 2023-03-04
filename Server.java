@@ -1,4 +1,3 @@
-package Server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -13,7 +12,7 @@ public class Server {
     public void startServer(){
 
         try{
-            while (serverSocket.isClosed()){
+            while (!serverSocket.isClosed()){
                 Socket socket = serverSocket.accept();
                 System.out.println("A new client has connected!");
                 ClientHandler clienthandler = new ClientHandler(socket);
@@ -26,7 +25,7 @@ public class Server {
         }
     }
 
-    public void classServerSocket(){
+    public void closeServerSocket(){
         try{
             if (serverSocket != null){
                 serverSocket.close();
@@ -37,7 +36,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(1234);
+        ServerSocket serverSocket = new ServerSocket(8000);
         Server server = new Server(serverSocket);
         server.startServer();
     }

@@ -1,4 +1,3 @@
-package Server;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -62,7 +61,7 @@ public class ClientHandler implements Runnable{
 
     public void removeClientHandler() {
         clientHandlers.remove(this);
-        broadcastMessage("Client: " + clientName + " has left the chat");
+        broadcastMessage("Server: " + clientName + " has left the chat");
     }
 
     public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
@@ -72,7 +71,7 @@ public class ClientHandler implements Runnable{
                 bufferedReader.close();
             }
             if (bufferedWriter != null) {
-                bufferedReader.close();
+                bufferedWriter.close();
             }
             if (socket != null) {
                 socket.close();
