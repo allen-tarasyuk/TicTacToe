@@ -1,4 +1,3 @@
-package Server;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -36,7 +35,7 @@ public class Client {
             Scanner scanner = new Scanner(System.in);
             while (socket.isConnected()) {
                 String messageToSend = scanner.nextLine();
-                bufferedWriter.write(name + " : " + messageToSend);
+                bufferedWriter.write(name + ": " + messageToSend);
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
             }
@@ -48,6 +47,7 @@ public class Client {
     
     public void listenForMessage() {
         new Thread(new Runnable() {
+            @Override
             public void run(){
                 String msgFromChat;
 
@@ -70,7 +70,7 @@ public class Client {
                 bufferedReader.close();
             }
             if (bufferedWriter != null) {
-                bufferedReader.close();
+                bufferedWriter.close();
             }
             if (socket != null) {
                 socket.close();
@@ -85,7 +85,7 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name for the chat: ");
         String name = scanner.nextLine();
-        Socket socket = new Socket("localhost", 1234);
+        Socket socket = new Socket("localhost", 8000);
         Client client = new Client(socket, name);
         client.listenForMessage();
         client.sendMessage();
