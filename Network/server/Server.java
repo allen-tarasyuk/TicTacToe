@@ -11,7 +11,12 @@ public class Server {
     }
     public void startServer(){
 
+        System.out.println("Starting server on " + this.serverSocket.getLocalSocketAddress().toString());
+
         try{
+
+            System.out.println("Ready to accept clients!");
+
             while (!serverSocket.isClosed()){
                 Socket socket = serverSocket.accept();
                 System.out.println("A new client has connected!");
