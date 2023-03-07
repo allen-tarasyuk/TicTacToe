@@ -83,6 +83,7 @@ public class Client {
     public static void main(String[] args) throws UnknownHostException, IOException {
         
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Starting a client...");
         System.out.println("Enter your name for the chat: ");
         String name = scanner.nextLine();
         Socket socket = new Socket("localhost", 8000);
