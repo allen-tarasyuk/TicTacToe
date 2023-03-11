@@ -22,4 +22,19 @@ public class newScreen3Controller {
 
     }
 
+
+    @FXML
+    void lobbyBtn(ActionEvent event) throws IOException {
+        System.out.println("Testing Lobby Button");
+
+
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("lobby.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+
+    }
+    
+
 }
