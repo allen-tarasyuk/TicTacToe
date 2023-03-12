@@ -5,8 +5,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.prefs.Preferences;
 
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Alert.AlertType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,21 +40,14 @@ public class lobbyController implements Initializable {
    
     ArrayList<Button> buttons;
 
-
+  
     public void setButton(String str){
-
         button1.setText(str);
     }
 
-  
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        buttons = new ArrayList<>(Arrays.asList(button1,button2,button3,button4,button5,button6));
-
-        // buttons.forEach(button ->{
-        //     setupButton(button);
-        //     button.setFocusTraversable(false);
-        // });
 
     }
 
@@ -64,8 +60,25 @@ public class lobbyController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
-       
+    }
+
+
+    @FXML
+    void newGameBtn(ActionEvent event) throws IOException  {
+
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("newScreen1.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Waiting for another Player...");
+        alert.showAndWait();
 
     }
+
 
 }

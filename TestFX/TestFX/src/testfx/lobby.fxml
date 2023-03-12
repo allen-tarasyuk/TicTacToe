@@ -28,7 +28,7 @@
             <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="485.0" styleClass="highlight" />
+            <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#newGameBtn" prefHeight="25.0" prefWidth="485.0" styleClass="highlight" />
             <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="498.0" styleClass="highlight" GridPane.rowIndex="1" />
             <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="521.0" styleClass="highlight" GridPane.rowIndex="2" />
             <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="499.0" styleClass="highlight" GridPane.rowIndex="3" />
