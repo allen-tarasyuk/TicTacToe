@@ -12,7 +12,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="225.0" layoutY="144.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="166.0" styleClass="highlight" text="Create Game" />
+      <Button layoutX="225.0" layoutY="144.0" mnemonicParsing="false" onAction="#createBtn" prefHeight="38.0" prefWidth="166.0" styleClass="highlight" text="Create Game" />
       <Button layoutX="225.0" layoutY="200.0" mnemonicParsing="false" onAction="#lobbyBtn" prefHeight="38.0" prefWidth="166.0" styleClass="highlight" text="Available Games" />
       <Label alignment="CENTER" layoutX="198.0" layoutY="69.0" prefHeight="38.0" prefWidth="223.0" text="Network Mode">
          <font>
