@@ -1,4 +1,4 @@
-package testfx;
+package router;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,8 +7,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import org.json.simple.*;
+import org.json.simple.parser.*;
 
-public class ClientHandler implements Runnable{
+public class ClientHandler implements Runnable {
 
     public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>();
     private Socket socket;
@@ -16,16 +18,15 @@ public class ClientHandler implements Runnable{
     private BufferedWriter bufferedWriter;
     private String clientName;
 
-    public ClientHandler(Socket socket){
-        try{
+    public ClientHandler(Socket socket) {
+        try {
             this.socket = socket;
             this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.clientName = bufferedReader.readLine();
             clientHandlers.add(this);
             broadcastMessage("Server: " + clientName + " has entered the chat!");
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
     }
@@ -35,14 +36,35 @@ public class ClientHandler implements Runnable{
         String messageFromClient;
 
         while (socket.isConnected()) {
-            try{
+            try {
                 messageFromClient = bufferedReader.readLine();
-                broadcastMessage(messageFromClient);
-            }
-            catch (IOException e) {
+                // broadcastMessage(messageFromClient);
+                handleMessage(messageFromClient);
+            } catch (Exception e) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
                 break;
             }
+        }
+    }
+
+    public void handleMessage(String msg) throws ParseException {
+        JSONParser parser = new JSONParser();
+        JSONObject jsonMsg = (JSONObject) parser.parse(msg);
+
+        String action = jsonMsg.get("action").toString();
+
+        switch (action) {
+            case "createRoom":
+                System.out.println("Creating room...");
+                break;
+            case "joinRoom":
+                System.out.println("Joining room...");
+                break;
+            case "gameMove":
+                broadcastMessage(msg);
+                break;
+            default:
+                break;
         }
     }
 
@@ -51,11 +73,9 @@ public class ClientHandler implements Runnable{
             try {
                 if (!clientHandler.clientName.equals(clientName)) {
                     clientHandler.bufferedWriter.write(messageToSend);
-                    clientHandler.bufferedWriter.newLine();
                     clientHandler.bufferedWriter.flush();
                 }
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
             }
         }
@@ -78,8 +98,7 @@ public class ClientHandler implements Runnable{
             if (socket != null) {
                 socket.close();
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
