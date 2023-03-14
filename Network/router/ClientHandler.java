@@ -56,6 +56,7 @@ public class ClientHandler implements Runnable {
         switch (action) {
             case "createRoom":
                 System.out.println("Creating room...");
+                Router.createRoom(jsonMsg.get("roomName").toString(), "PLAYER 1");
                 break;
             case "joinRoom":
                 System.out.println("Joining room...");
