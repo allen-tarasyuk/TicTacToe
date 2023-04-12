@@ -1,27 +1,48 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class ClientHandler implements Runnable{
+public class ClientHandler implements Runnable {
 
     public static ArrayList<ClientHandler> clientHandlers = new ArrayList<>();
+    public ArrayList<String> channels = new ArrayList<>();
     private Socket socket;
-    private BufferedReader bufferedReader;
-    private BufferedWriter bufferedWriter;
+    private DataInputStream bufferedReader;
+    private DataOutputStream bufferedWriter;
     private String clientName;
 
     public ClientHandler(Socket socket){
         try{
             this.socket = socket;
-            this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            this.clientName = bufferedReader.readLine();
+            this.bufferedWriter = new DataOutputStream(socket.getOutputStream());
+            this.bufferedReader = new DataInputStream(socket.getInputStream());
+
+            byte[] b = new byte[bufferedReader.readInt()];
+            bufferedReader.readFully(b, 0, b.length);
+            clientName = new String(b);
+
+            try {
+                b = new byte[bufferedReader.readInt()];
+                bufferedReader.readFully(b, 0, b.length);
+                ByteArrayInputStream byteInStream = new ByteArrayInputStream(b);
+                ObjectInputStream objectInStream = new ObjectInputStream(byteInStream);
+                this.channels = (ArrayList<String>) objectInStream.readObject();
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+
             clientHandlers.add(this);
-            broadcastMessage("Server: " + clientName + " has entered the chat!");
+
+            broadcastMessage(new ApplicationMessage("channel", "Server: " + clientName + " has entered the chat!"));
         }  
         catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
@@ -30,12 +51,12 @@ public class ClientHandler implements Runnable{
     
     @Override
     public void run() {
-        String messageFromClient;
-
         while (socket.isConnected()) {
             try{
-                messageFromClient = bufferedReader.readLine();
-                broadcastMessage(messageFromClient);
+                byte[] b = new byte[bufferedReader.readInt()];
+                bufferedReader.readFully(b, 0, b.length);
+                ApplicationMessage message = Router.deserializeMessage(b);
+                broadcastMessage(message);
             } 
             catch (IOException e) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
@@ -44,13 +65,17 @@ public class ClientHandler implements Runnable{
         }
     }
     
-    public void broadcastMessage(String messageToSend) {
+    public void broadcastMessage(ApplicationMessage message) {
         for (ClientHandler clientHandler : clientHandlers) {
             try {
                 if (!clientHandler.clientName.equals(clientName)) {
-                    clientHandler.bufferedWriter.write(messageToSend);
-                    clientHandler.bufferedWriter.newLine();
-                    clientHandler.bufferedWriter.flush();
+                    byte[] b = Router.serializeMessage(message);
+
+                    if (clientHandler.channels.contains(message.getChannel())) {
+                        clientHandler.bufferedWriter.writeInt(b.length);
+                        clientHandler.bufferedWriter.write(b);
+                        clientHandler.bufferedWriter.flush();
+                    }
                 }
             }
             catch (IOException e) {
@@ -59,13 +84,13 @@ public class ClientHandler implements Runnable{
         }
     }
 
-    public void removeClientHandler() {
-        clientHandlers.remove(this);
-        broadcastMessage("Server: " + clientName + " has left the chat");
-    }
+    // public void removeClientHandler() {
+    //     clientHandlers.remove(this);
+    //     broadcastMessage("Server: " + clientName + " has left the chat");
+    // }
 
-    public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
-        removeClientHandler();
+    public void closeEverything(Socket socket, DataInputStream bufferedReader, DataOutputStream bufferedWriter) {
+        // removeClientHandler();
         try {
             if (bufferedReader != null) {
                 bufferedReader.close();
