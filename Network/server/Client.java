@@ -119,7 +119,7 @@ public class Client {
             System.out.println("made it");
             byte[] bytes = byteOutStream.toByteArray();
             // System.out.println("Serialized ArrayList to bytes: " + bytes.length + " bytes");
-            Socket socket = new Socket("localhost", 8000);
+            Socket socket = new Socket("localhost", 1024);
             Client client = new Client(socket, name, bytes);
             client.listenForMessage();
             client.sendMessage();
