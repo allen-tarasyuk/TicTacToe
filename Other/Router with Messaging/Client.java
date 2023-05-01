@@ -5,7 +5,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectOutputStream;
 
 public class Client {
 
@@ -25,6 +28,17 @@ public class Client {
         }
     }
 
+    public String serializePacket(Packet packet) {
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(baos)) {
+            oos.writeObject(packet);
+            return new String(baos.toByteArray(), StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public void sendMessage() {
         try {
             // Sending name to client connection
@@ -34,8 +48,14 @@ public class Client {
 
             Scanner scanner = new Scanner(System.in);
             while (socket.isConnected()) {
-                String messageToSend = scanner.nextLine();
-                bufferedWriter.write(messageToSend);
+                // System.out.print("Enter channel to send message to: ");
+                // String channel = scanner.nextLine();
+                // System.out.print("Enter message to send: ");
+                // String messageToSend = scanner.nextLine();
+                // bufferedWriter
+                // .write(serializePacket(new Packet(channel, "test-message", new
+                // TestMessage(messageToSend))));
+                // SEND MESSAGES FROM HERE
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
             }

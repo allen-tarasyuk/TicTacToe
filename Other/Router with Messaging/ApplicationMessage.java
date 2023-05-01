@@ -5,9 +5,20 @@ public abstract class ApplicationMessage implements Serializable {
     private String channel;
     private String clientName;
 
+    public ApplicationMessage() {
+        this.channel = "";
+        this.clientName = "";
+    }
+
     // Constructor that sets the channel field.
     public ApplicationMessage(String channel) {
         this.channel = channel;
+        this.clientName = "";
+    }
+
+    public ApplicationMessage(String channel, String clientName) {
+        this.channel = channel;
+        this.clientName = clientName;
     }
 
     // Getter for the channel field.

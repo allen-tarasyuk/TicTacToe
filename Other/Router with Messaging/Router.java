@@ -70,15 +70,17 @@ public class Router {
                 JoinGameRequest joinGameMessage = (JoinGameRequest) message;
                 String gameToJoin = joinGameMessage.getGameName();
                 String joinGameClientName = joinGameMessage.getClientName();
-                ClientConnection joinGameClientConnection = getClientConnectionByChannel("/unknown", clientName);
+                ClientConnection joinGameClientConnection = getClientConnectionByChannel("/unknown",
+                        joinGameClientName);
                 Router.channelListeners.get(gameToJoin).add(joinGameClientConnection);
                 removeClientConnectionByChannel("/unknown", joinGameClientName);
                 // TODO send response to client
                 break;
             case "list-games":
+                // List games here
                 break;
             case "make-move":
-                String channel = packet.getChannel();
+                // String channel = packet.getChannel();
                 break;
             default:
                 System.out.println("Unknown message type");
@@ -111,7 +113,7 @@ public class Router {
     }
 
     // Sends a message to the listener registered for its channel.
-    public void sendMessage(String channel, ApplicationMessage message, String name) {
+    public static void sendMessage(String channel, ApplicationMessage message, String name) {
         // Serialize the message into a byte array.
         String serializedMessage = new String(serializeMessage(message), StandardCharsets.UTF_8);
         // Get the listener for the message's channel.
