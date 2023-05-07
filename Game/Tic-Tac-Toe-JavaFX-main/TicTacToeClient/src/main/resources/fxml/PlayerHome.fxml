@@ -35,7 +35,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" onAction="#singlePlay" onMouseEntered="#mouseEntered" prefHeight="43.0" prefWidth="237.0" styleClass="btn-play" text="Singe Player" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#singlePlay" onMouseEntered="#mouseEntered" prefHeight="43.0" prefWidth="237.0" styleClass="btn-play" text="Single Player" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

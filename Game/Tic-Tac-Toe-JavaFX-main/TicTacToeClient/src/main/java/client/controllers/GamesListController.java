@@ -61,7 +61,7 @@ public class GamesListController implements Initializable {
     }
     @FXML
     private void mouseEntered(MouseEvent ae){
-        new SoundPlayer(SoundPlayer.SOUND.TICK).play();
+        // new SoundPlayer(SoundPlayer.SOUND.TICK).play();
     }
 
 }

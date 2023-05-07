@@ -14,13 +14,13 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" stylesheets="@../styles/RegisterForm.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.LoginWindowController">
    <children>
-      <VBox alignment="CENTER" prefHeight="550.0" prefWidth="400.0" style="-fx-background-color: #345f94; -fx-background-radius: 0px 10px 10px 0px;" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER" prefHeight="550.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD); -fx-background-radius: 0px 10px 10px 0px;" HBox.hgrow="ALWAYS">
          <effect>
             <DropShadow />
          </effect>
          <children>
             <FontAwesomeIconView fill="WHITE" glyphName="GAMEPAD" size="90" text="" />
-            <Label text="Tick Tack Toe Game" textFill="WHITE">
+            <Label text="Tic-Tac-Toe" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Insets top="-50.0" />
                </VBox.margin>
                <children>
-                  <FontAwesomeIconView fill="#345f94" glyphName="CLOSE" onMouseClicked="#close" size="18">
+                  <FontAwesomeIconView fill="#FF7F50" glyphName="CLOSE" onMouseClicked="#close" size="18">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></FontAwesomeIconView>
@@ -49,8 +49,8 @@
                   <Insets right="20.0" />
                </padding>
             </HBox>
-            <FontAwesomeIconView fill="#345f94" glyphName="USERS" size="50" text="" />
-            <Label text="Player Login" textFill="#345f94">
+            <FontAwesomeIconView fill="#FF7F50" glyphName="USERS" size="50" text="" />
+            <Label text="Player Login" textFill="#FF7F50">
                <font>
                   <Font name="Comic Sans MS Bold" size="30.0" />
                </font>
@@ -60,8 +60,8 @@
             </Label>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <FontAwesomeIconView fill="#345f94" glyphName="USER" size="25" text="" />
-                  <TextField fx:id="usernameField" prefHeight="42.0" prefWidth="280.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #6587b3; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS">
+                  <FontAwesomeIconView fill="#FF7F50" glyphName="USER" size="25" text="" />
+                  <TextField fx:id="usernameField" prefHeight="42.0" prefWidth="280.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #FF7F50; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -76,12 +76,12 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <FontAwesomeIconView fill="#345f94" glyphName="KEY" size="20">
+                  <FontAwesomeIconView fill="#FF7F50" glyphName="KEY" size="20">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
                   </FontAwesomeIconView>
-                  <PasswordField fx:id="passwordField" prefHeight="42.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #6587b3; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS">
+                  <PasswordField fx:id="passwordField" prefHeight="42.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #FF7F50; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -105,7 +105,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Button>
-            <Label text="OR" textFill="#345f94">
+            <Label text="OR" textFill="#FF7F50">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
@@ -113,7 +113,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#switchRegister" prefHeight="31.0" prefWidth="172.0" styleClass="btn-signin" text="New User ? Sign Up " textFill="#345f94">
+            <Button mnemonicParsing="false" onAction="#switchRegister" prefHeight="31.0" prefWidth="172.0" styleClass="btn-signin" text="New User ? Sign Up " textFill="#FF7F50">
                <font>
                   <Font size="15.0" />
                </font>

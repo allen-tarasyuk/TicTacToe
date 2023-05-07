@@ -22,11 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
-/**
- * FXML Controller class
- *
- * @author ashraf
- */
+
 public class GameReplayWindowController implements Initializable {
     public static GameReplayWindowController me;
 
@@ -73,7 +69,7 @@ public class GameReplayWindowController implements Initializable {
     }
 
     public void setMove(int index, String move) {
-        new SoundPlayer(SoundPlayer.SOUND.PLAYER_ACTION_A).play();
+        // new SoundPlayer(SoundPlayer.SOUND.PLAYER_ACTION_A).play();
         switch (index) {
             case 0:
                 field1.setText(move);
@@ -121,20 +117,22 @@ public class GameReplayWindowController implements Initializable {
 
     public void handleResult(String axis, String winner) {
         if(winner.equalsIgnoreCase(Player.player.getUsername())){
-            new SoundPlayer(SoundPlayer.SOUND.GAME_VICTORY).play();
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_VICTORY).play();
             highlightAxis(axis,Color.GREEN);
                 headerLabel.setText("You Won");
         }else if(!winner.isBlank()){
-            new SoundPlayer(SoundPlayer.SOUND.GAME_DEFEAT).play();
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_DEFEAT).play();
             highlightAxis(axis,Color.RED);
             headerLabel.setTextFill(Color.RED);
             headerLabel.setText(winner + " Won");
         }else{
-            new SoundPlayer(SoundPlayer.SOUND.GAME_DRAW).play();
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_DRAW).play();
             headerLabel.setText("DRAW");
         }
 
     }
+
+
     private void highlightAxis(String axis,Paint color){
 
         switch (axis) {
@@ -187,4 +185,7 @@ public class GameReplayWindowController implements Initializable {
                 break;
         }
     }
+
+
+
 }

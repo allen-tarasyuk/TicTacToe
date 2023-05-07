@@ -22,11 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
-/**
- * FXML Controller class
- *
- * @author ashraf
- */
+
 public class GameWindowController implements Initializable {
     public static GameWindowController me;
 
@@ -85,27 +81,28 @@ public class GameWindowController implements Initializable {
     }
     public void refreshTurn(){
         if(Game.currentGame.isMyTurn()){
-            myMove.setTextFill(Color.GREEN);
-            opponentMove.setTextFill(Color.WHITE);
+            // myMove.setTextFill(Color.GREEN);
+            // opponentMove.setTextFill(Color.WHITE);
+
         }else{
-            myMove.setTextFill(Color.WHITE);
-            opponentMove.setTextFill(Color.GREEN);
+            // myMove.setTextFill(Color.WHITE);
+            // opponentMove.setTextFill(Color.GREEN);
         }
     }
     public void refreshHeader(){
         headerLabel.setVisible(true);
         if(Game.currentGame.isMyTurn()){
-            headerLabel.setTextFill(Color.GREEN);
+            // headerLabel.setTextFill(Color.GREEN);
             headerLabel.setText("Your Turn");
         }else{
-            headerLabel.setTextFill(Color.RED);
+            // headerLabel.setTextFill(Color.RED);
             headerLabel.setText("Opponent Turn");
         }
     }
     public void setMove(int index, String move) {
         refreshTurn();
         refreshHeader();
-        new SoundPlayer(SoundPlayer.SOUND.PLAYER_ACTION_A).play();
+        // new SoundPlayer(SoundPlayer.SOUND.PLAYER_ACTION_A).play();
         switch (index) {
             case 0:
                 field1.setText(move);
@@ -202,20 +199,23 @@ public class GameWindowController implements Initializable {
         chatTextField.setDisable(true);
         gameGrid.setDisable(true);
         sendMessagebtn.setDisable(true);
-        Paint color = Color.BLUE;
+        //Paint color = Color.BLUE;
+        Paint color = Color.WHITE;
         String headerText = "DRAW!";
         if (result.equalsIgnoreCase("win")) {
-            color = Color.GREEN;
-            new SoundPlayer(SoundPlayer.SOUND.GAME_VICTORY).play();
+            // color = Color.GREEN;
+            color = Color.WHITE;
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_VICTORY).play();
             headerText = "You Won!";
-            highlightAxis(axis,Color.GREEN);
+            //  highlightAxis(axis,Color.GREEN);
         } else if(result.equalsIgnoreCase("lose")) {
-            color = Color.RED;
-            new SoundPlayer(SoundPlayer.SOUND.GAME_DEFEAT).play();
+            //  color = Color.RED;
+            color = Color.WHITE;
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_DEFEAT).play();
             headerText = "You Lost";
-            highlightAxis(axis,Color.RED);
+            //  highlightAxis(axis,Color.RED);
         }else{
-            new SoundPlayer(SoundPlayer.SOUND.GAME_DRAW).play();
+            // new SoundPlayer(SoundPlayer.SOUND.GAME_DRAW).play();
         }
         headerLabel.setTextFill(color);
         headerLabel.setText(headerText);
@@ -274,8 +274,13 @@ public class GameWindowController implements Initializable {
                 break;
         }
     }
+
+
     public void messageRecieved(String sender, String message) {
         System.out.println(message);
         chatBox.appendText(sender + ": " + message + "\n");
     }
+
+
+
 }

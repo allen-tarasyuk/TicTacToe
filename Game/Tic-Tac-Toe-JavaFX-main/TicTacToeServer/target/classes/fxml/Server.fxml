@@ -37,13 +37,13 @@
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </padding>
-                     <effect>
+                     <!-- <effect>
                         <DropShadow>
                            <color>
                               <Color red="0.08910000324249268" green="0.42693743109703064" blue="0.9900000095367432" />
                            </color>
                         </DropShadow>
-                     </effect>
+                     </effect> -->
                   </Label>
                   <Label fx:id="statusText" prefHeight="76.0" prefWidth="126.0" text="Offline" textFill="WHITE">
                      <font>

@@ -24,11 +24,7 @@ import javafx.scene.input.MouseEvent;
 import org.pomo.toasterfx.ToastBarToasterService;
 import org.pomo.toasterfx.model.impl.ToastTypes;
 
-/**
- * FXML Controller class
- *
- * @author ashra
- */
+
 public class LoginWindowController implements Initializable {
 
     /**

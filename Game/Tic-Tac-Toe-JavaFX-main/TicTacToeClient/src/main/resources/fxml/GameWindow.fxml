@@ -49,7 +49,7 @@
                            <children>
                               <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="180.0" prefHeight="62.0" prefWidth="122.0" prefWrapLength="0.0">
                                  <children>
-                                    <Label fx:id="headerLabel" textFill="#00ff2f">
+                                    <Label fx:id="headerLabel" textFill="#fff">
                                        <font>
                                           <Font size="31.0" />
                                        </font>

@@ -1,5 +1,6 @@
 .text-area {
-    -fx-background-color: rgba(53,89,119,0.7);
+    /* -fx-background-color: rgba(53,89,119,0.7); */
+     /* -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD); */
 }
 
 .text-area .scroll-pane {

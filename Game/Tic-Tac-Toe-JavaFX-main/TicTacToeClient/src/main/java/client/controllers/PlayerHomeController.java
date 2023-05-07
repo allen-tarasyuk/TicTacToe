@@ -32,7 +32,7 @@ public class PlayerHomeController  implements Initializable {
     }
     @FXML
     private void mouseEntered(MouseEvent ae){
-        new SoundPlayer(SoundPlayer.SOUND.TICK).play();
+        // new SoundPlayer(SoundPlayer.SOUND.TICK).play();
     }
     @FXML
     private void singlePlay(ActionEvent ae){

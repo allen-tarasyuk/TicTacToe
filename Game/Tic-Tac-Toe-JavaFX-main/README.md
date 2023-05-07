@@ -74,25 +74,13 @@ Server Features:
 * [SQLLite](https://www.sqlite.org/index.html) - JDBC Type 4 driver for SQLLite
 * [JSON-JAVA](https://github.com/stleary/JSON-java) -  A simple Java toolkit for JSON
 
-
-## Authors
-
-* **Ashraf Abdullatif Mohamed Eldawody** - *Server Side - Game Senario*
-* **Asmaa Ebrahim Abdelhamid Ebrahim** - *UI Design - Sound Effects - Game Senario*
-* **Mohamed Hossam Elhusseiny Elghrbawy** - *Database Connectivity - Client Side -Game logic - Game Senario*
-* **Shorouk Albayomy Abdelaziz Albayomy** - *Database Design - login - register - Game Senario*
-
 ## Screenshot
 
-![hg](https://i.imgur.com/DopSKeP.png)
-![hg](https://i.imgur.com/8fD1Hj4.png)
-![hg](https://i.imgur.com/cSYETTl.png)
-![hg](https://i.imgur.com/cimDk5g.png)
-![hg](https://i.imgur.com/2SaQmgz.png)
-## Video Preview
+![image](https://user-images.githubusercontent.com/58355275/236595476-55aeb678-9df1-4a67-86a7-4116342d2cd3.png)
+![image](https://user-images.githubusercontent.com/58355275/236595488-0fd50c77-3f6f-4b9c-bc72-340f760995b5.png)
+![image](https://user-images.githubusercontent.com/58355275/236595492-d83a5e3d-e091-4e37-b03e-90368854d383.png)
+![image](https://user-images.githubusercontent.com/58355275/236595499-1d43d175-7cda-43ba-8dbf-38de6cd7f24d.png)
+![image](https://user-images.githubusercontent.com/58355275/236595504-37ade57d-3b75-459c-9237-0b2be5539ed6.png)
+![image](https://user-images.githubusercontent.com/58355275/236595513-d3fff701-d79a-4950-afe1-49998dd8c776.png)
 
-[![Video Preview](https://img.youtube.com/vi/k8eiaKY0I2Y/0.jpg)](https://www.youtube.com/watch?v=k8eiaKY0I2Y)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

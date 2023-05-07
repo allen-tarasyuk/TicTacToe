@@ -17,9 +17,7 @@ import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
 
-/**
- * @author ashra
- */
+
 public class ResponseHandler {
     public static String tempOpponentUsername;
     public static ArrayList<Player> playersList = new ArrayList<>();
@@ -94,7 +92,7 @@ public class ResponseHandler {
                     break;
                 case "message":
                     Platform.runLater(()->{
-                        GameWindowController.me.messageRecieved(parsedResponse.getString("from"),parsedResponse.getString("message"));
+                        // GameWindowController.me.messageRecieved(parsedResponse.getString("from"),parsedResponse.getString("message"));
                     });
                     break;
                 case "game-history":
@@ -111,7 +109,7 @@ public class ResponseHandler {
                 case "replay-finish":
                     Platform.runLater(()->{
                         String winner = parsedResponse.isNull("winner")? "Computer" : parsedResponse.getString("winner");
-                        GameReplayWindowController.me.handleResult(parsedResponse.getString("axis"),winner);
+                        // GameReplayWindowController.me.handleResult(parsedResponse.getString("axis"),winner);
                     });
                     break;
             }
