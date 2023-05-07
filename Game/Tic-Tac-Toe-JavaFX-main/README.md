@@ -1,28 +1,4 @@
-# Tic Tac Toe
-[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-
-A network based Tic tac toe game, the implementation was done as the java project @ ITI intake 42 by students of the open source applications development track.
-
-
-# Contents
-
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installing](#installing)
-- [Features ](#features)
-- [Diagrams](#diagrams)
-- [Built With](#built-with)
-- [Authors](#authors)
-- [Screenshot](#screenshot)
-- [Video Preview](#video-preview)
-- [License](#license)
-
-
-### Prerequisites
-
-java 11 or higher recommended
+# Tic-Tac-Toe
 
 
 ### Installing
@@ -76,11 +52,11 @@ Server Features:
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/58355275/236595476-55aeb678-9df1-4a67-86a7-4116342d2cd3.png)
-![image](https://user-images.githubusercontent.com/58355275/236595488-0fd50c77-3f6f-4b9c-bc72-340f760995b5.png)
-![image](https://user-images.githubusercontent.com/58355275/236595492-d83a5e3d-e091-4e37-b03e-90368854d383.png)
-![image](https://user-images.githubusercontent.com/58355275/236595499-1d43d175-7cda-43ba-8dbf-38de6cd7f24d.png)
-![image](https://user-images.githubusercontent.com/58355275/236595504-37ade57d-3b75-459c-9237-0b2be5539ed6.png)
-![image](https://user-images.githubusercontent.com/58355275/236595513-d3fff701-d79a-4950-afe1-49998dd8c776.png)
+![image](https://user-images.githubusercontent.com/58355275/236701439-c8448da5-e001-4fd1-863b-5b69356ab128.png)
+![image](https://user-images.githubusercontent.com/58355275/236701447-eda4555c-3def-401e-9afb-591aec64d6e4.png)
+![image](https://user-images.githubusercontent.com/58355275/236701457-207c70bc-98e9-4b13-a635-e6319957e6ef.png)
+![image](https://user-images.githubusercontent.com/58355275/236701463-7d5294d6-c9a3-4a87-97f6-318bd7132564.png)
+![image](https://user-images.githubusercontent.com/58355275/236701476-a7384290-2fb4-4e2e-9a9c-91a2a1498f87.png)
+
 
 
